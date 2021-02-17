@@ -1,13 +1,13 @@
 {
   "name": "Search and Switch Containers",
-  "description": "To use, type 'co' part of the name of the container you want to switch to into the URL bar. This addon will switch the current container to that one.",
+  "description": "To use, type '-co' and part of the name of the container you want to switch to into the URL bar. This addon will switch the current container to that one.",
   "version": "1.6",
   "applications": {
     "gecko": {
       "strict_min_version": "52.0a1"
     }
   },
-  "homepage_url": "https://github.com/andreicristianpetcu/Search-and-Switch-Containers",
+  "homepage_url": "https://github.com/sykoram/Search-and-Switch-Containers",
   "icons": {
     "16": "icon-16.png",
     "19": "icon-19.png",
@@ -22,7 +22,7 @@
     ]
   },
   "omnibox": {
-    "keyword": "co"
+    "keyword": "-co"
   },
   "manifest_version": 2,
   "permissions": [
