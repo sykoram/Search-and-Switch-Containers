@@ -63,6 +63,7 @@ browser.omnibox.onInputEntered.addListener(async (text, disposition) => {
 
 // fuzzy match for strings - chars in the same order as in haystack?
 // "hello".fuzzy("eo") -> true
+// "hello".fuzzy("") -> true
 // thanks to Dziad Borowy: https://stackoverflow.com/a/15252131
 String.prototype.fuzzy = function (str) {
   let hay = this.toLowerCase()
@@ -74,5 +75,6 @@ String.prototype.fuzzy = function (str) {
       return false
     }
   }
-  return pos != -1;
-};
+  // return pos != -1
+  return true
+}
