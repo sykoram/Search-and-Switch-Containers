@@ -4,7 +4,7 @@
   "version": "1.6",
   "applications": {
     "gecko": {
-      "strict_min_version": "52.0a1"
+      "strict_min_version": "53.0"
     }
   },
   "homepage_url": "https://github.com/sykoram/Search-and-Switch-Containers",
