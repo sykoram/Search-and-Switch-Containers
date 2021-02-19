@@ -1,6 +1,6 @@
 // default suggestion always appears first when the user is interacting with the extension; this can't be selected
 browser.omnibox.setDefaultSuggestion({
-  description: `Search for containers and switch to them (e.g. "-co personal" or "-co default")`
+  description: `Search for containers and switch to them ("-co personal" or "-co default")`
 })
 
 // when user types a new character etc.
@@ -17,7 +17,6 @@ browser.omnibox.onInputChanged.addListener(async (text, addSuggestions) => {
   // TODO: use '-' as an alias to the default/no container
   // if typed expression is contained in a name of a container, suggest the container
   for (let context of contexts) {
-    // if (context.name.toLowerCase().indexOf(text.toLowerCase()) > -1) {
     if (context.name.fuzzy(text)) {
       result.push({
         content: context.name,
@@ -61,7 +60,7 @@ browser.omnibox.onInputEntered.addListener(async (text, disposition) => {
   }
 })
 
-// fuzzy match for strings - chars in the same order as in haystack?
+// fuzzy match for strings - chars in the same order as in the haystack
 // "hello".fuzzy("eo") -> true
 // "hello".fuzzy("") -> true
 // thanks to Dziad Borowy: https://stackoverflow.com/a/15252131
@@ -75,6 +74,5 @@ String.prototype.fuzzy = function (str) {
       return false
     }
   }
-  // return pos != -1
   return true
 }
